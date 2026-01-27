@@ -24,6 +24,7 @@ private:
     void saveAll(const std::string& filename = "library.txt");
     void loadAll(const std::string& filename = "library.txt");
     void displayAll();
+    int getSize();
 };
 
 #endif

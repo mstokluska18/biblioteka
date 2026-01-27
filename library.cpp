@@ -116,6 +116,9 @@ void Library::displayAll(){
         cout << "-----------------"<<endl;
     }
 }
+int Library::getSize() {
+    return items.size();
+}
 
 Library::~Library() {
     for (size_t i = 0; i < items.size(); i++) {

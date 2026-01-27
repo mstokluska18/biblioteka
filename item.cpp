@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <sstream>
+#include <cstring>
 #include "item.h"
 using namespace std;
 

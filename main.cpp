@@ -2,6 +2,8 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include <sstream>
+#include <cstring>
 #include "item.h"
 #include "book.h"
 #include "magazine.h"
@@ -32,13 +34,23 @@ int main(int argc, char* argv[]) {
 
     int choice;
     Library library;
+    //gotowe obiekty do testowania druga testowa konfiguracja dla pliku 
+    if (argc ==3 && string(argv[1]) == "-file") {
+        cout<<"Konfiguracja z plikiem: "<< argv[2]<<endl;
+        library.addItem(new Book("Zemsta", 1834, false, "Fredro"));
+        library.addItem(new Movie("Avengers", 2012, false, "Whedon"));
+        library.addItem(new Magazine("Forbes", 2026, false, 1));
 
-    //gotowe obiekty do testowania
+    }else{
+    //gotowe obiekty do testowania domyslna testowa konfiguracja
+    cout<<"Konfiguracja z domyslna" <<endl;
     library.addItem(new Book("Hobbit", 1937, false, "Tolkien"));
     library.addItem(new Book("Harry Potter", 1997, false, "J.K. Rowling"));
     library.addItem(new Movie("Matrix", 1999, false, "Wachowski"));
     library.addItem(new Magazine("National Geographic", 2023, false, 5));
+    }
 
+    cout<<"W bibliotece jest teraz przedmiotow: "<<library.getSize()<<endl;
     while (true) {
         cout << "\n=== SYSTEM BIBLIOTEKI ===\n";
         cout << "1. Dodaj pozycję\n";
