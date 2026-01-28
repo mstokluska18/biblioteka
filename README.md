@@ -46,5 +46,6 @@ Klasy pochodne nadpisują metody zapisu, aby uwzględnić swoje unikalne dane.
    make
    lub
    g++ main.cpp item.cpp book.cpp movie.cpp magazine.cpp library.cpp -o biblioteka_projekt
-2. Abu uruchomic ./biblioteka_projekt -> potem wpisujemy cyfre aby wejsc w odpowiednia funckje
-3. Aby otworzyc menu pomocy ./biblioteka_projekt -help
+2. Aby uruchomic ./biblioteka_projekt -> potem wpisujemy cyfre aby wejsc w odpowiednia funkcję i aby korzystać z konfugiracji domyślnej
+3. Aby uruchomic ./biblioteka_projekt -file -> działanie to samo co powyżej tylko pracujemy na danych z pliku -file a nie domyślnej konfiguracji
+4. Aby otworzyc menu pomocy ./biblioteka_projekt -help
